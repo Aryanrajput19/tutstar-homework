@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TutStar - Homework</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(135deg, #e8e0ff, #d8d0ff);
+    }
+
+    .container {
+        display: flex;
+        min-height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        background: #fff;
+        padding: 20px 15px;
+        width: 240px;
+        border-radius: 40px;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .logo {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    .logo span {
+        color: #6b4ce6;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        color: #555;
+        font-size: 15px;
+    }
+
+    .menu-item.active {
+        background: #6b4ce6;
+        color: #fff;
+    }
+
+    .menu-item:hover {
+        background: rgba(107, 76, 230, 0.1);
+    }
+
+    .logout {
+        font-size: 14px;
+        color: #777;
+        cursor: pointer;
+    }
+
+    /* Main */
+    .main {
+        flex: 1;
+        padding: 20px;
+    }
+
+    .top-bar {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .profile {
+        background: #fff;
+        padding: 8px 15px;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .profile img {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+    }
+
+    .profile-info {
+        font-size: 13px;
+        color: #555;
+        line-height: 1.2;
+    }
+
+    /* Assignment Section */
+    .assignment-section h2 {
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .assignment-card {
+        background: #fff;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        overflow: hidden;
+    }
+
+    .assignment-header {
+        padding: 15px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+    }
+
+    .math {
+        background: linear-gradient(90deg, #56a4f1, #b3d4fc);
+    }
+
+    .history {
+        background: linear-gradient(90deg, #c79b7b, #e5c2a8);
+    }
+
+    .assignment-sub {
+        font-size: 13px;
+        font-weight: normal;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    table th, table td {
+        padding: 12px;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    table th {
+        background: #fff;
+        font-weight: bold;
+    }
+
+    table tr {
+        border-bottom: 1px solid #ddd;
+    }
+
+    table tr:last-child {
+        border-bottom: none;
+    }
+
+    .download {
+        text-align: center;
+        color: #6b4ce6;
+        cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+        }
+        .sidebar {
+            /* width: 100%; */
+            height: 100vh;
+            flex-direction: column;
+            justify-content: space-around;
+            border-radius: 0;
+        }
+        .menu {
+            flex-direction: column;
+            gap: 10px;
+        }
+        .main {
+            padding: 10px;
+        }
+        table th, table td {
+            font-size: 12px;
+            padding: 8px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .profile-info {
+            display: none;
+        }
+        .menu-item span {
+            display: none;
+        }
+        .menu-item {
+            justify-content: center;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div>
+            <div class="logo"><span>Tut</span>Star</div>
+            <div class="menu">
+                <div class="menu-item"><span></span> Schedule</div>
+                <div class="menu-item"><span></span> Courses</div>
+                <div class="menu-item"><span></span> Notification</div>
+                <div class="menu-item"><span></span> Post Doubt</div>
+                <div class="menu-item active"><span></span> Homework</div>
+                <div class="menu-item"><span></span> Settings</div>
+            </div>
+        </div>
+        <div class="logout"> Logout</div>
+    </div>
+
+    <!-- Main content -->
+    <div class="main">
+        <div class="top-bar">
+            <div class="profile">
+                <div class="profile-info">
+                    <strong>Abcdef XYZ</strong><br>
+                    VII Class
+                </div>
+                <img src="0eca7e002db370d9048889936829b61151783edf.png" alt="Profile">
+            </div>
+        </div>
+
+        <div class="assignment-section">
+            <h2>Assignment</h2>
+
+            <div class="assignment-card">
+                <div class="assignment-header math">
+                    Mathematics <span class="assignment-sub">Mr. Sen</span>
+                </div>
+                <table>
+                    <tr>
+                        <th>Date</th>
+                        <th>Chapter</th>
+                        <th>Topic</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>1 Jan 2025</td>
+                        <td>Abcdefgh ilhgasxa mA</td>
+                        <td>Abcdefgh ilhgasxa mA</td>
+                        <td class="download">⬇</td>
+                    </tr>
+                    <tr>
+                        <td>1 Jan 2025</td>
+                        <td>Abcdefgh ilhgasxa mA</td>
+                        <td>Abcdefgh ilhgasxa mA</td>
+                        <td class="download">⬇</td>
+                    </tr>
+                    <tr>
+                        <td>1 Jan 2025</td>
+                        <td>Abcdefgh ilhgasxa mA</td>
+                        <td>Abcdefgh ilhgasxa mA</td>
+                        <td class="download">⬇</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="assignment-card">
+                <div class="assignment-header history">
+                    History <span class="assignment-sub">Mr. Sen</span>
+                </div>
+                <table>
+                    <tr>
+                        <th>Date</th>
+                        <th>Chapter</th>
+                        <th>Topic</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>1 Jan 2025</td>
+                        <td>Abcdefgh ilhgasxa mA</td>
+                        <td>Abcdefgh ilhgasxa mA</td>
+                        <td class="download">⬇</td>
+                    </tr>
+                    <tr>
+                        <td>1 Jan 2025</td>
+                        <td>Abcdefgh ilhgasxa mA</td>
+                        <td>Abcdefgh ilhgasxa mA</td>
+                        <td class="download">⬇</td>
+                    </tr>
+                    <tr>
+                        <td>1 Jan 2025</td>
+                        <td>Abcdefgh ilhgasxa mA</td>
+                        <td>Abcdefgh ilhgasxa mA</td>
+                        <td class="download">⬇</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
